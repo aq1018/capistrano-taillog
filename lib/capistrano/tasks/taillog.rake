@@ -1,3 +1,8 @@
+namespace :load do
+  task :defaults do
+    load "capistrano/taillog/defaults.rb"
+  end
+end
 
 namespace :logs do
   task :tail, :file do |t, args|
