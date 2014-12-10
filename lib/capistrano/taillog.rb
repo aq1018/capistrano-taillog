@@ -1,7 +1,2 @@
-require "capistrano/taillog/version"
+load File.expand_path('../tasks/taillog.rake', __FILE__)
 
-module Capistrano
-  module Taillog
-    # Your code goes here...
-  end
-end
