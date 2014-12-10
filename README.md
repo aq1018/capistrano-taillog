@@ -1,28 +1,48 @@
 # Capistrano::Taillog
 
-TODO: Write a gem description
+**Note: this plugin works only with Capistrano 3.**
 
-## Installation
+### About
 
-Add this line to your application's Gemfile:
+Capistrano Taillog makes tailing logs easier. run `cap <stage> log:tail` to tail logs from remote servers.
+
+### Installation
+
+Put the following in your application's `Gemfile`:
 
 ```ruby
-gem 'capistrano-taillog'
+group :development do
+  gem 'capistrano', '~> 3.2.0'
+  gem 'capistrano-taillog'
+end
 ```
 
-And then execute:
+Then:
 
-    $ bundle
+```
+$ bundle install
+```
 
-Or install it yourself as:
+### Usage
 
-    $ gem install capistrano-taillog
+Put the following in your application's `Capfile`:
 
-## Usage
+```ruby
+require 'capistrano/taillog'
+```
 
-TODO: Write usage instructions here
+Then:
 
-## Contributing
+```
+cap <stage> logs:tail
+```
+
+### Configurations
+
+Please see: [defaults.rb](https://github.com/aq1018/capistrano-taillog/blob/master/lib/capistrano/taillog/defaults.rb)
+
+
+### Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/capistrano-taillog/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
