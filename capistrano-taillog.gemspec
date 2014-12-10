@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Capistrano::Taillog::VERSION
   spec.authors       = ["Aaron Qian"]
   spec.email         = ["aq1018@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Tail logs easily with cap logs:tail}
+  spec.description   = %q{Capistrano plugin to allow tailing remote logs.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
