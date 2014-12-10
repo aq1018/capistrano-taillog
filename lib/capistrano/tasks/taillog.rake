@@ -5,11 +5,16 @@ namespace :load do
 end
 
 namespace :logs do
-  task :tail, :file do |t, args|
-    ask(:file, fetch(:default_log)
+  desc "Tail remote logs"
+  task :tail do
+    ask(:file, fetch(:default_log))
     on roles(:all) do
       path = File.join(fetch(:log_path), fetch(:file))
-      execute :tail '-f', file
+      if test("[ -f #{path} ]")
+        execute :tail, '-f', path
+      else
+        fatal "#{path} does not exist!"
+      end
     end
   end
 end

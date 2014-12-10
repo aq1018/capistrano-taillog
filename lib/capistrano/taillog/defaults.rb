@@ -2,7 +2,7 @@
 # The path to where the log files are stored.
 # Defaults to shared/log
 set :log_path, -> {
-  File.join(fetch(:shared_path), 'log')
+  File.join(shared_path, 'log')
 }
 
 # :default_log
