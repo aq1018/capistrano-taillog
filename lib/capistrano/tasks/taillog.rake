@@ -1,4 +1,5 @@
-mespace :logs do
+
+namespace :logs do
   task :tail, :file do |t, args|
     ask(:file, fetch(:default_log)
     on roles(:all) do
